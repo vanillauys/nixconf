@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs._1password-shell-plugins.hmModules.default
+    inputs.onepassword-shell-plugins.hmModules.default
   ];
 
   home.sessionVariables = {

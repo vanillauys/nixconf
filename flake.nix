@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix";
-    _1password-shell-plugins.url = "github:1Password/shell-plugins";
+    onepassword-shell-plugins.url = "github:1Password/shell-plugins";
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, _1password-shell-plugins, ... }@inputs: {
