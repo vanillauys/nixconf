@@ -11,6 +11,7 @@
     ./modules/system/networking.nix
     ./modules/system/locale.nix
     ./modules/system/nix.nix
+    ./modules/system/swap.nix
     ./modules/hardware/audio.nix
     ./modules/hardware/bluetooth.nix
     ./modules/hardware/fingerprint.nix
