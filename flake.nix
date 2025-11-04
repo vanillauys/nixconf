@@ -11,7 +11,7 @@
     onepassword-shell-plugins.url = "github:1Password/shell-plugins";
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, _1password-shell-plugins, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, catppuccin, onepassword-shell-plugins, ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
