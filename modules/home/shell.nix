@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs._1password-shell-plugins.hmModules.default
+  ];
+
   home.sessionVariables = {
     GOOGLE_APPLICATION_CREDENTIALS = "${config.home.homeDirectory}/.config/gcloud/application_default_credentials.json";
     SSH_AUTH_SOCK = "${config.home.homeDirectory}/.1password/agent.sock";
@@ -12,6 +16,14 @@
     "${config.home.homeDirectory}/.bun/bin"
     "${config.home.homeDirectory}/.local/bin"
   ];
+
+  programs._1password-shell-plugins = {
+    enable = true;
+    plugins = with pkgs; [
+      gh
+      google-cloud-sdk
+    ];
+  };
 
   programs.zsh = {
     enable = true;
