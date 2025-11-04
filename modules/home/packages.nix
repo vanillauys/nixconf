@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     # CLI tools
     eza
@@ -11,7 +13,7 @@
     xclip
     btop
     alejandra
-    
+
     # Development tools
     gh
     poetry

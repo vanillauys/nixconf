@@ -1,24 +1,26 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    
+
     matchBlocks = {
       "*" = {
         extraOptions = {
           IdentityAgent = "~/.1password/agent.sock";
         };
       };
-      
+
       "personalgit" = {
         hostname = "github.com";
         user = "git";
         identityFile = "~/.ssh/personal_git.pub";
         identitiesOnly = true;
       };
-      
+
       "glydegit" = {
         hostname = "github.com";
         user = "git";

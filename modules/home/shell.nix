@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.onepassword-shell-plugins.hmModules.default
   ];
@@ -43,7 +46,7 @@
       ls = "eza --tree --level 1 --icons=always";
       vim = "nvim";
       update = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
-      
+
       # Dev aliases
       boot = "./gradlew bootRun";
       sa = "./gradlew --parallel spotlessApply";

@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   fonts = {
     packages = with pkgs; [
       noto-fonts
@@ -12,10 +14,10 @@
 
     fontconfig = {
       defaultFonts = {
-        monospace = [ "JetBrainsMono" "Noto Color Emoji" ];
-        sansSerif = [ "Noto Sans" "Noto Color Emoji" ];
-        serif = [ "Noto Serif" "Noto Color Emoji" ];
-        emoji = [ "Noto Color Emoji" ];
+        monospace = ["JetBrainsMono" "Noto Color Emoji"];
+        sansSerif = ["Noto Sans" "Noto Color Emoji"];
+        serif = ["Noto Serif" "Noto Color Emoji"];
+        emoji = ["Noto Color Emoji"];
       };
     };
   };

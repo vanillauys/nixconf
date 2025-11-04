@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   nix.gc = {
@@ -8,9 +11,9 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
-  
+
   nix.optimise = {
     automatic = true;
-    dates = [ "weekly" ];
+    dates = ["weekly"];
   };
 }
