@@ -18,6 +18,7 @@
     ./modules/desktop/xserver.nix
     ./modules/desktop/cinnamon.nix
     ./modules/desktop/fonts.nix
+    ./modules/desktop/icons.nix
     ./modules/services/printing.nix
     ./modules/programs/shell.nix
     ./modules/programs/packages.nix
