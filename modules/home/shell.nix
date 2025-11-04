@@ -23,8 +23,9 @@
   programs._1password-shell-plugins = {
     enable = true;
     plugins = with pkgs; [
+      zsh
+      ngrok
       gh
-      google-cloud-sdk
     ];
   };
 
