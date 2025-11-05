@@ -19,7 +19,7 @@ in {
     home-manager = {
       extraSpecialArgs = {inherit inputs;};
       users = {
-        "${cfg.userName}" = import ../../../home.nix;
+        "${cfg.userName}" = import ../../home.nix;
       };
     };
   };
