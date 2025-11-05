@@ -22,6 +22,7 @@
     ./modules/home/gcloud.nix
     ./modules/home/brave.nix
     ./modules/home/development.nix
+    ./modules/home/cursors.nix
   ];
 
   programs.home-manager.enable = true;

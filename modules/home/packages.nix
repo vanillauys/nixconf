@@ -18,6 +18,7 @@
     gh
     poetry
     gradle
+    nodejs_24
   ];
 
   programs.btop = {
