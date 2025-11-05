@@ -13,12 +13,6 @@
     xclip
     btop
     alejandra
-
-    # Development tools
-    gh
-    poetry
-    gradle
-    nodejs_24
   ];
 
   programs.btop = {

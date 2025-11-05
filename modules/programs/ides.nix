@@ -12,9 +12,9 @@ in {
 
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
-      vscode
-      jetbrains.idea-community
-      # Add more IDEs like jetbrains.clion, etc.
+      jetbrains.idea-ultimate
+      jetbrains.pycharm-professional
+      jetbrains.webstorm
     ];
   };
 }

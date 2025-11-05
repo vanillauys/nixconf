@@ -21,7 +21,11 @@ in {
       rustc
       cargo
       go
-      # Add more as needed
+      gradle
+      temurin-bin
+      bun
+      gh
+      poetry
     ];
   };
 }
