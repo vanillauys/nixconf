@@ -6,6 +6,7 @@
 }: {
   environment.systemPackages = with pkgs; [
     vim
+    neovim
     tmux
     wget
     python314

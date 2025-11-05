@@ -13,22 +13,6 @@
     xclip
     btop
     alejandra
-
-    # Editors and tools
-    neovim
-    fzf
-
-    # Applications
-    _1password-gui
-    _1password-cli
-
-    # Runtimes
-    temurin-bin
-    bun
-
-    # Fun
-    cbonsai
-    dracula-theme
   ];
 
   programs.btop = {

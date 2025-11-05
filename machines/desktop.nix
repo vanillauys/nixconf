@@ -23,8 +23,6 @@
     ./../modules/programs/packages.nix
     ./../modules/programs/1password.nix
     ./../modules/programs/podman.nix
-    ./../modules/programs/development.nix
-    ./../modules/programs/ides.nix
     ./../modules/hardware/nvidia.nix
     ./../modules/system/home-manager.nix
     ./../modules/system/system.nix
@@ -33,22 +31,11 @@
 
   main-user.enable = true;
   main-user.userName = "wihan";
-  programs.development.enable = true;
-  programs.ides.enable = true;
   hardware.nvidia.enable = true;
   system.home-manager.enable = true;
   system.home-manager.userName = "wihan";
+  system.home-manager.development.enable = true;
+  system.home-manager.ides.enable = true;
   system.system.enable = true;
   main-user.extraGroups = ["networkmanager" "wheel" "podman"];
-  main-user.packages = with pkgs; [
-    neovim
-    fzf
-    _1password-gui
-    _1password-cli
-    temurin-bin
-    bun
-    cbonsai
-    dracula-theme
-    # Add desktop-specific packages here
-  ];
 }
