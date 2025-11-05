@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-        ./../hardware-configuration-desktop.nix  # Uncomment and create if needed
+    ./../hardware-configuration-desktop.nix
     ./../main-user.nix
     ./../modules/system/boot.nix
     ./../modules/system/networking.nix
@@ -14,9 +14,8 @@
     ./../modules/system/swap.nix
     ./../modules/hardware/audio.nix
     ./../modules/hardware/bluetooth.nix
-    # ./../modules/hardware/fingerprint.nix  # Maybe not for desktop
     ./../modules/desktop/xserver.nix
-    ./../modules/desktop/cinnamon.nix  # Or change to kde if module exists
+    ./../modules/desktop/cinnamon.nix
     ./../modules/desktop/fonts.nix
     ./../modules/desktop/icons.nix
     ./../modules/services/printing.nix
@@ -36,7 +35,7 @@
   main-user.userName = "wihan";
   programs.development.enable = true;
   programs.ides.enable = true;
-    hardware.nvidia.enable = true;
+  hardware.nvidia.enable = true;
   system.home-manager.enable = true;
   system.home-manager.userName = "wihan";
   system.system.enable = true;
@@ -52,13 +51,4 @@
     dracula-theme
     # Add desktop-specific packages here
   ];
-
-
-    users = {
-      "wihan" = import ./../home.nix;
-    };
-  };
-
-
-  system.stateVersion = "25.05";
 }

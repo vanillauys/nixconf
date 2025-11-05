@@ -49,12 +49,4 @@
     cbonsai
     dracula-theme
   ];
-
-
-    users = {
-      "wihan" = import ./../home.nix;
-    };
-  };
-
-
 }
