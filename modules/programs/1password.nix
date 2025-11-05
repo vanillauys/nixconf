@@ -16,6 +16,12 @@ in {
       description = "Enable 1Password GUI";
     };
 
+    cli = mkOption {
+      type = types.bool;
+      default = true;
+      description = "Enable 1Password CLI";
+    };
+
     polkitPolicyOwners = mkOption {
       type = types.listOf types.str;
       default = [];
@@ -29,5 +35,9 @@ in {
       enable = true;
       polkitPolicyOwners = cfg.polkitPolicyOwners;
     };
+
+    environment.systemPackages = with pkgs;
+      (optional cfg.gui _1password-gui)
+      ++ (optional cfg.cli _1password-cli);
   };
 }

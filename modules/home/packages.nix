@@ -18,10 +18,6 @@
     neovim
     fzf
 
-    # Applications
-    _1password-gui
-    _1password-cli
-
     # Runtimes
     temurin-bin
     bun
