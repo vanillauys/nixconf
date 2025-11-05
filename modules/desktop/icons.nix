@@ -17,7 +17,6 @@ in {
       dracula-icon-theme
       numix-icon-theme
       arc-icon-theme
-      breeze-icons
       adwaita-icon-theme
     ];
   };
