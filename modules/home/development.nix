@@ -13,6 +13,9 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
+    home.sessionVariables = {
+      GOOGLE_APPLICATION_CREDENTIALS = "${config.home.homeDirectory}/.config/gcloud/application_default_credentials.json";
+    };
     home.packages = with pkgs;
       [
         # Version control and tools
@@ -20,7 +23,6 @@ in {
         gh
 
         # Compilers and build tools
-
         clang
         gradle
 
@@ -41,6 +43,7 @@ in {
         obsidian
         postman
         slack
+        google-cloud-sdk
       ]
       ++ lib.optionals cfg.ides [
         jetbrains.idea-ultimate

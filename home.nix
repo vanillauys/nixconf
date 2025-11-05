@@ -20,7 +20,6 @@
     ./modules/home/packages.nix
     ./modules/home/ghostty.nix
     ./modules/home/podman.nix
-    ./modules/home/gcloud.nix
     ./modules/home/brave.nix
     ./modules/home/development.nix
     ./modules/home/cursors.nix

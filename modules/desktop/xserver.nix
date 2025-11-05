@@ -3,13 +3,22 @@
   lib,
   pkgs,
   ...
-}: {
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "za";
-      variant = "";
-    };
+}:
+with lib; let
+  cfg = config.desktop.xserver;
+in {
+  options.desktop.xserver = {
+    enable = mkEnableOption "X server configuration";
   };
-  services.libinput.enable = true;
+
+  config = mkIf cfg.enable {
+    services.xserver = {
+      enable = true;
+      xkb = {
+        layout = "za";
+        variant = "";
+      };
+    };
+    services.libinput.enable = true;
+  };
 }

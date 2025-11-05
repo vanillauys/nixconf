@@ -45,7 +45,6 @@
     shellAliases = {
       ls = "eza --tree --level 1 --icons=always";
       vim = "nvim";
-      update = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
 
       # Dev aliases
       boot = "./gradlew bootRun";
@@ -56,7 +55,7 @@
       ccbranch = "git branch | grep \"*\" | cut -c 3- | xclip";
       dbranch = "git branch | cut -c 3- | gum choose --no-limit | xargs -I {} git branch -D {}";
       fuckit = "reset --hard";
-      git = "git";
+      git = "git ";
       gw-build = "./gradlew build -xtest --continuous --parallel";
     };
 

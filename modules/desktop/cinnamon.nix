@@ -3,25 +3,34 @@
   lib,
   pkgs,
   ...
-}: {
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+}:
+with lib; let
+  cfg = config.desktop.cinnamon;
+in {
+  options.desktop.cinnamon = {
+    enable = mkEnableOption "Cinnamon desktop environment";
+  };
 
-  services.xserver.desktopManager.cinnamon.extraGSettingsOverrides = ''
-    [org.cinnamon.desktop.interface]
-    gtk-theme='Dracula'
-    icon-theme='Papirus-Dark'
-    cursor-theme='catppuccin-mocha-mauve-cursors'
+  config = mkIf cfg.enable {
+    services.xserver.displayManager.lightdm.enable = true;
+    services.xserver.desktopManager.cinnamon.enable = true;
 
-    [org.cinnamon.desktop.wm.preferences]
-    theme='Dracula'
+    services.xserver.desktopManager.cinnamon.extraGSettingsOverrides = ''
+      [org.cinnamon.desktop.interface]
+      gtk-theme='Dracula'
+      icon-theme='Papirus-Dark'
+      cursor-theme='catppuccin-mocha-mauve-cursors'
 
-    [org.cinnamon.theme]
-    name='Dracula'
-  '';
+      [org.cinnamon.desktop.wm.preferences]
+      theme='Dracula'
 
-  environment.systemPackages = with pkgs; [
-    ghostty
-    sl
-  ];
+      [org.cinnamon.theme]
+      name='Dracula'
+    '';
+
+    environment.systemPackages = with pkgs; [
+      ghostty
+      sl
+    ];
+  };
 }
