@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    # ./../hardware-configuration-desktop.nix  # Uncomment and create if needed
+        ./../hardware-configuration-desktop.nix  # Uncomment and create if needed
     ./../main-user.nix
     ./../modules/system/boot.nix
     ./../modules/system/networking.nix
@@ -34,7 +34,7 @@
   main-user.userName = "wihan";
   programs.development.enable = true;
   programs.ides.enable = true;
-  hardware.nvidia.enable = true;
+    hardware.nvidia.enable = true;
 
   users.users.wihan = {
     isNormalUser = true;
