@@ -24,11 +24,15 @@
     ./../modules/programs/packages.nix
     ./../modules/programs/1password.nix
     ./../modules/programs/podman.nix
+    ./../modules/programs/development.nix
+    ./../modules/programs/ides.nix
     inputs.home-manager.nixosModules.default
   ];
 
   main-user.enable = true;
   main-user.userName = "wihan";
+  programs.development.enable = true;
+  programs.ides.enable = true;
 
   users.users.wihan = {
     isNormalUser = true;
