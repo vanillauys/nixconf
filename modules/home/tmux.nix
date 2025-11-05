@@ -31,7 +31,7 @@
   };
 
   catppuccin.tmux = {
-    enable = true;
+    enable = false;
     flavor = "mocha";
   };
 }
