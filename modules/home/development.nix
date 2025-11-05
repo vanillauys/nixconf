@@ -20,7 +20,7 @@ in {
         gh
 
         # Compilers and build tools
-        gcc
+
         clang
         gradle
 
