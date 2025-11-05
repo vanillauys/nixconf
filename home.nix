@@ -16,6 +16,7 @@
     ./modules/home/git.nix
     ./modules/home/ssh.nix
     ./modules/home/tmux.nix
+    ./modules/home/grok.nix
     ./modules/home/packages.nix
     ./modules/home/ghostty.nix
     ./modules/home/podman.nix
