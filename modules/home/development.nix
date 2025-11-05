@@ -13,37 +13,39 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      # Version control and tools
-      git
-      gh
+    home.packages = with pkgs;
+      [
+        # Version control and tools
+        git
+        gh
 
-      # Compilers and build tools
-      gcc
-      clang
-      gradle
+        # Compilers and build tools
+        gcc
+        clang
+        gradle
 
-      # Languages
-      python3
-      nodejs
-      yarn
-      rustc
-      cargo
-      go
-      temurin-bin
-      bun
+        # Languages
+        python3
+        nodejs
+        yarn
+        rustc
+        cargo
+        go
+        temurin-bin
+        bun
 
-      # Python package manager
-      poetry
+        # Python package manager
+        poetry
 
-      # Development tools
-      obsidian
-      postman
-      slack
-    ] ++ lib.optionals cfg.ides [
-      jetbrains.idea-ultimate
-      jetbrains.pycharm-professional
-      jetbrains.webstorm
-    ];
+        # Development tools
+        obsidian
+        postman
+        slack
+      ]
+      ++ lib.optionals cfg.ides [
+        jetbrains.idea-ultimate
+        jetbrains.pycharm-professional
+        jetbrains.webstorm
+      ];
   };
 }

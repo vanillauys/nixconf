@@ -34,7 +34,7 @@
   system.home-manager.enable = true;
   system.home-manager.userName = "wihan";
   system.home-manager.development.enable = true;
-  system.home-manager.ides.enable = false;
+  system.home-manager.ides.enable = true;
   system.system.enable = true;
   main-user.extraGroups = ["networkmanager" "wheel" "podman"];
 }
