@@ -23,7 +23,7 @@ in {
         nerd-fonts.hack
         nerd-fonts.meslo-lg
         roboto
-        ubuntu_font_family
+        ubuntu-classic
         liberation_ttf
         dejavu_fonts
         font-awesome
