@@ -27,6 +27,8 @@
     ./../modules/programs/development.nix
     ./../modules/programs/ides.nix
     ./../modules/hardware/nvidia.nix
+    ./../modules/system/home-manager.nix
+    ./../modules/system/system.nix
     inputs.home-manager.nixosModules.default
   ];
 
@@ -35,32 +37,28 @@
   programs.development.enable = true;
   programs.ides.enable = true;
     hardware.nvidia.enable = true;
+  system.home-manager.enable = true;
+  system.home-manager.userName = "wihan";
+  system.system.enable = true;
+  main-user.extraGroups = ["networkmanager" "wheel" "podman"];
+  main-user.packages = with pkgs; [
+    neovim
+    fzf
+    _1password-gui
+    _1password-cli
+    temurin-bin
+    bun
+    cbonsai
+    dracula-theme
+    # Add desktop-specific packages here
+  ];
 
-  users.users.wihan = {
-    isNormalUser = true;
-    description = "wihan";
-    extraGroups = ["networkmanager" "wheel" "podman"];
-    packages = with pkgs; [
-      neovim
-      fzf
-      _1password-gui
-      _1password-cli
-      temurin-bin
-      bun
-      cbonsai
-      dracula-theme
-      # Add desktop-specific packages here
-    ];
-  };
 
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
     users = {
       "wihan" = import ./../home.nix;
     };
   };
 
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.05";
 }
