@@ -32,5 +32,6 @@
     ./programs/podman.nix
     ./programs/shell.nix
     ./programs/media.nix
+    ./programs/browsers.nix
   ];
 }

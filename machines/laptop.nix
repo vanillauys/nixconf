@@ -60,6 +60,11 @@
   programs.media.enable = true;
   programs.media.players = ["all"]; # or ["vlc"] or ["mpv"]
   programs.podman.enable = true;
+  programs.browsers.enable = true;
+  programs.browsers.default = "brave"; # or ["chrome"] or ["firefox"]
+  programs.browsers.brave.enable = true; # default true
+  programs.browsers.firefox.enable = true;
+  #programs.browsers.chrome.enable = false;
   programs.packages.enable = true;
   programs.packages.extraPackages = with pkgs; [
     # any other packages
