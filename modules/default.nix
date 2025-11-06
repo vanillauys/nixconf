@@ -9,6 +9,7 @@
     ./system/swap.nix
     ./system/system.nix
     ./system/firewall.nix
+    ./system/tailscale.nix
     # Hardware
     ./hardware/audio.nix
     ./hardware/fingerprint.nix
