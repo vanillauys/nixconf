@@ -37,12 +37,14 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    defaultKeymap = "viins";
 
     oh-my-zsh = {
       enable = true;
       plugins = [
         "git"
         "history"
+        "vi-mode"
       ];
     };
 
@@ -70,7 +72,13 @@
     '';
   };
 
-  programs.bat.enable = true;
+  programs.bat = {
+    enable = true;
+    config = {
+      pager = "less -FR";
+      style = "plain";
+    };
+  };
 
   programs.starship = {
     enable = true;
