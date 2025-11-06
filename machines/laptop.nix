@@ -17,6 +17,10 @@
   system.swap.sizeGB = 32;
   system.networking.enable = true;
   system.networking.hostName = "nixos";
+  system.locale.enable = true;
+  # Use defaults (ZA), or override:
+  # system.locale.timeZone = "Europe/London";
+  # system.locale.defaultLocale = "en_GB.UTF-8";
   # user
   main-user.enable = true;
   main-user.userName = "wihan";
