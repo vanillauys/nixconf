@@ -15,6 +15,8 @@
   system.nix.enable = true;
   system.swap.enable = true;
   system.swap.sizeGB = 32;
+  system.networking.enable = true;
+  system.networking.hostName = "nixos";
   # user
   main-user.enable = true;
   main-user.userName = "wihan";
@@ -31,24 +33,26 @@
   #  desktop.hyprland.enable = false;
   desktop.fonts.enable = true;
   desktop.icons.enable = true;
+  desktop.themes.enable = true;
   desktop.xserver.enable = true; # Required for Cinnamon and GNOME
-  # fingerprint sensor
+  # hardware
   hardware.fingerprint.enable = true;
-  # nvidia drivers
   hardware.nvidia.enable = false;
-  # bluetooth
   hardware.bluetooth.enable = true;
-  # audio
   hardware.audio.enable = true;
   hardware.audio.backend = "jack"; # or "pipewire"
-  # networking
-  system.networking.enable = true;
-  system.networking.hostName = "nixos";
-  # printing
+  hardware.power.enable = true;
+  hardware.power.laptop = true;
+  hardware.ssd.enable = true;
+  # services
   services.printing.enable = true;
-  # podman (docker)
+  services.firewall.enable = true;
+  services.firewall.allowedTCPPorts = [22 80 443];
+  services.firewall.allowedUDPPorts = [];
+  # programs
+  programs.media.enable = true;
+  programs.media.players = ["all"]; # or ["vlc"] or ["mpv"]
   programs.podman.enable = true;
-  # system packages
   programs.packages.enable = true;
   programs.packages.extraPackages = with pkgs; [
     # any other packages
