@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.services.tailscale;
+  cfg = config.networking.tailscale;
 in {
-  options.services.tailscale = {
+  options.networking.tailscale = {
     enable = mkEnableOption "Tailscale VPN";
 
     openFirewall = mkOption {

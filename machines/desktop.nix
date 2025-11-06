@@ -21,6 +21,8 @@
   # Use defaults (ZA), or override:
   # system.locale.timeZone = "Europe/London";
   # system.locale.defaultLocale = "en_GB.UTF-8";
+  # tailscale
+  networking.tailscale.enable = true;
   # user
   main-user.enable = true;
   main-user.userName = "wihan";
