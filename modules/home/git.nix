@@ -15,7 +15,7 @@
 
       gpg = {
         format = "ssh";
-        ssh.program = "${pkgs._1password}/bin/op-ssh-sign";
+        ssh.program = "${pkgs._1password-cli}/bin/op-ssh-sign";
       };
       commit = {
         gpgsign = true;
