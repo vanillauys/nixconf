@@ -48,6 +48,7 @@
   hardware.power.enable = true;
   hardware.power.laptop = false;
   hardware.ssd.enable = true;
+  hardware.usbMedia.enable = true;
   # services
   services.printing.enable = true;
   services.firewall.enable = true;

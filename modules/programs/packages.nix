@@ -20,12 +20,45 @@ in {
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs;
       [
+        # editors
         vim
+        nano
+        # terminal multiplexer
         tmux
+        # network
         wget
+        curl
+        rsync
+        # version control
         git
-        ananicy-rules-cachyos
+        # archive utilities
+        zip
+        unzip
+        gzip
+        bzip2
+        xz
+        p7zip
+        unrar
+        # file management
+        tree
+        file
+        which
+        # system info
         fastfetch
+        htop
+        lsof
+        pciutils
+        usbutils
+        # text processing
+        ripgrep
+        fd
+        bat
+        jq
+        # performance
+        ananicy-rules-cachyos
+        # process management
+        killall
+        psmisc
       ]
       ++ cfg.extraPackages;
   };

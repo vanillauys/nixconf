@@ -15,6 +15,7 @@
     ./hardware/nvidia.nix
     ./hardware/power.nix
     ./hardware/ssd.nix
+    ./hardware/usb-media.nix
     # Desktop
     ./desktop/cinnamon.nix
     ./desktop/kde.nix

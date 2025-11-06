@@ -45,6 +45,7 @@
     shellAliases = {
       ls = "eza --tree --level 1 --icons=always";
       vim = "nvim";
+      cat = "bat";
 
       # Dev aliases
       boot = "./gradlew bootRun";
@@ -63,6 +64,13 @@
       eval "$(zoxide init zsh)"
       eval "$(starship init zsh)"
     '';
+  };
+
+  programs.bat = {
+    enable = true;
+    config = {
+      theme = "catppuccin-mocha";
+    };
   };
 
   programs.starship = {
@@ -99,6 +107,11 @@
   };
 
   catppuccin.fzf = {
+    enable = true;
+    flavor = "mocha";
+  };
+
+  catppuccin.bat = {
     enable = true;
     flavor = "mocha";
   };
