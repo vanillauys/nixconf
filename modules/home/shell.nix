@@ -66,12 +66,7 @@
     '';
   };
 
-  programs.bat = {
-    enable = true;
-    config = {
-      theme = "catppuccin-mocha";
-    };
-  };
+  programs.bat.enable = true;
 
   programs.starship = {
     enable = true;
