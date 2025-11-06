@@ -13,6 +13,10 @@
     SSH_AUTH_SOCK = "${config.home.homeDirectory}/.1password/agent.sock";
     EDITOR = "nvim";
     DISABLE_AUTO_TITLE = "true";
+    LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [
+      pkgs.stdenv.cc.cc.lib
+      pkgs.libz
+    ]}";
   };
 
   home.sessionPath = [
