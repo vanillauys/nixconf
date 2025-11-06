@@ -13,12 +13,18 @@ in {
     laptop = mkOption {
       type = types.bool;
       default = false;
-      description = "Enable laptop-specific power optimizations (TLP)";
+      description = "Enable laptop-specific power optimizations";
+    };
+
+    backend = mkOption {
+      type = types.enum ["tlp" "power-profiles-daemon"];
+      default = "power-profiles-daemon";
+      description = "Power management backend to use";
     };
   };
 
   config = mkIf cfg.enable {
-    services.tlp = mkIf cfg.laptop {
+    services.tlp = mkIf (cfg.laptop && cfg.backend == "tlp") {
       enable = true;
       settings = {
         CPU_SCALING_GOVERNOR_ON_AC = "performance";
@@ -29,6 +35,8 @@ in {
         STOP_CHARGE_THRESH_BAT0 = 80;
       };
     };
+
+    services.power-profiles-daemon.enable = mkIf (cfg.laptop && cfg.backend == "power-profiles-daemon") true;
 
     powerManagement = {
       enable = true;
