@@ -33,7 +33,7 @@
   # development
   system.home-manager.development.enable = true;
   system.home-manager.ides.enable = true;
-  system.home-manager.development.languages.rust = false;
+  system.home-manager.development.languages.rust = true;
   system.home-manager.development.cloud.gcloud = true;
   system.home-manager.development.cloud.aws = false;
   system.home-manager.development.communication.slack = true;
