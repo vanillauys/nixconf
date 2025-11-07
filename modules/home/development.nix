@@ -110,7 +110,6 @@ in {
       ]
       ++ lib.optionals cfg.languages.c [
         clang
-        gcc
       ]
       ++ lib.optionals cfg.languages.rust [
         rustc
