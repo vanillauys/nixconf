@@ -9,17 +9,9 @@
   ];
 
   home.sessionVariables = {
-    GOOGLE_APPLICATION_CREDENTIALS = "${config.home.homeDirectory}/.config/gcloud/application_default_credentials.json";
     SSH_AUTH_SOCK = "${config.home.homeDirectory}/.1password/agent.sock";
     EDITOR = "nvim";
     DISABLE_AUTO_TITLE = "true";
-    LD_LIBRARY_PATH = "${pkgs.lib.makeLibraryPath [
-      pkgs.stdenv.cc.cc.lib
-      pkgs.libz
-      pkgs.glibc
-      pkgs.zlib
-      pkgs.libgcc
-    ]}";
   };
 
   home.sessionPath = [
