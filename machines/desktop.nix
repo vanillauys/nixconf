@@ -30,8 +30,13 @@
   # home
   system.home-manager.enable = true;
   system.home-manager.userName = "wihan";
+  # development
   system.home-manager.development.enable = true;
   system.home-manager.ides.enable = true;
+  system.home-manager.development.languages.rust = false;
+  system.home-manager.development.cloud.gcloud = true;
+  system.home-manager.development.cloud.aws = false;
+  system.home-manager.development.communication.slack = true;
   # desktop environment
   desktop.cinnamon.enable = true;
   #  desktop.kde.enable = false;
