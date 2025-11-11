@@ -31,9 +31,9 @@ in {
 
       fontconfig = {
         defaultFonts = {
-          monospace = ["JetBrainsMono" "Noto Color Emoji"];
-          sansSerif = ["Noto Sans" "Noto Color Emoji"];
-          serif = ["Noto Serif" "Noto Color Emoji"];
+          monospace = ["JetBrainsMono"];
+          sansSerif = ["Noto Sans"];
+          serif = ["Noto Serif"];
           emoji = ["Noto Color Emoji"];
         };
       };
